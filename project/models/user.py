@@ -40,7 +40,7 @@ class UserSchema(ma.Schema):
     email=fields.Email(required=True)
     first_name = fields.String()
     last_name = fields.String()
-    password = fields.String(load_only=True, validate=check_password_length)
+    password = fields.String(load_only=True, validate=check_password_length, required=True)
 
 
     @validates('email')
