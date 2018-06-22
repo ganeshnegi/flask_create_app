@@ -22,6 +22,7 @@ htmlcov/
 .coverage.*
 *,cover
 app.db
+test.db
 .vscode/
 __pycache__/
 migrations/      
