@@ -33,7 +33,5 @@ def create_app(config_class='config.Config'):
 	def check_if_token_in_blacklist(decrypted_token):
 		jti = decrypted_token['jti']
 		return user.BlacklistedToken.is_jti_blacklisted(jti)
-
-	
 	return app
 
