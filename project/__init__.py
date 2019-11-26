@@ -21,9 +21,9 @@ def create_app(config_class='config.Config'):
 	ma = Marshmallow(app)
 	jwt = JWTManager(app)
 
-	from models import user
+	from .models import user
 
-	from api import index, auth, post as post_api, user as user_api
+	from .api import index, auth, post as post_api, user as user_api
 	
 	app.register_blueprint(index.bp_home)
 	app.register_blueprint(auth.login_logout_bp)
